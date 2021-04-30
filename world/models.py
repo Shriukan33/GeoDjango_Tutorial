@@ -13,6 +13,8 @@ class WorldBorders(models.Model):
     un = models.IntegerField('United Nation code') # France métropolitaine: 250
     region = models.IntegerField('Region code') # Specific to US ?
     subregion = models.IntegerField('Sub-region code') # Same, not sure
+    lon = models.FloatField(null=True)
+    lat = models.FloatField(null=True)
 
     # A specific field to add because it's GeoDjango
     mpoly = models.MultiPolygonField()
